@@ -9,20 +9,20 @@
 import Foundation
 
 extension APIClient {
-    
+
     class func getObjects(completion: @escaping (_ levels: [Object]) -> Void) {
         let path = "cars"
         get(path: path) { json in
             if (json as? [[String: AnyObject]]) != nil {
-                let cars = Factory.objectsFromJsonArray(jsonArray: json as! [[String : AnyObject]])
+                let cars = Factory.objectsFromJsonArray(jsonArray: json as! [[String: AnyObject]])
                 completion(cars)
             } else {
                 completion([Object]())
             }
-            
+
         }
     }
-    
+
     class func editObject(object: Object, completion: @escaping (_ success: Bool) -> Void) {
         let path = "modify"
         let params = objectParams(object)
@@ -35,27 +35,55 @@ extension APIClient {
         }
     }
 
+    class func editObjectAttribute(object: Object, completion: @escaping (_ success: Bool) -> Void) {
+        let path = "km"
+        let params = objectParamsForAttribute(object)
+        post(path: path, params: params) { json in
+            if json != nil {
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
+    }
+
     class func objectParams(_ object: Object) -> [String: Any] {
         var params = [String: Any]()
-        
+
         if let id = object.id {
             params["id"] = id
         }
-        
+
         if let name = object.name {
             params["name"] = name
         }
-        
+
         if let status = object.status {
             params["status"] = status
         }
-        
-        if let year = object.year  {
+
+        if let year = object.year {
             params["year"] = year
         }
-        
+
         print(params)
         return params
     }
-    
+
+    class func objectParamsForAttribute(_ object: Object) -> [String: Any] {
+        var params = [String: Any]()
+
+        if let id = object.id {
+            params["id"] = id
+        }
+
+        if let km = object.km {
+            params["km"] = km
+        }
+
+        print(params)
+        return params
+    }
+
+
 }

@@ -53,6 +53,8 @@ class Factory {
 
         if let jsonKm = json["km"] as? Int {
             objectKm = jsonKm
+        } else if let jsonKm = json["km"] as?  String {
+            objectKm = Int(jsonKm)
         }
 
         let object = Object(

@@ -449,14 +449,24 @@
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXV-9f-oMZ">
+                                                            <rect key="frame" x="15" y="0.0" width="315" height="75"/>
+                                                            <connections>
+                                                                <action selector="editKm:" destination="VDz-MC-vLu" eventType="touchUpInside" id="BBe-r5-ap7"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="of5-gK-f1Q" firstAttribute="leading" secondItem="AIJ-cQ-N68" secondAttribute="leading" constant="15" id="1i7-pn-t4A"/>
+                                                        <constraint firstAttribute="bottom" secondItem="RXV-9f-oMZ" secondAttribute="bottom" id="Anu-Rb-Qmd"/>
                                                         <constraint firstItem="tpt-M9-s0U" firstAttribute="centerY" secondItem="AIJ-cQ-N68" secondAttribute="centerY" id="HXa-KN-luE"/>
+                                                        <constraint firstItem="RXV-9f-oMZ" firstAttribute="leading" secondItem="AIJ-cQ-N68" secondAttribute="leading" constant="15" id="MoS-Po-aWr"/>
                                                         <constraint firstItem="of5-gK-f1Q" firstAttribute="centerY" secondItem="AIJ-cQ-N68" secondAttribute="centerY" id="TQf-Ff-Bug"/>
                                                         <constraint firstAttribute="trailing" secondItem="tpt-M9-s0U" secondAttribute="trailing" constant="15" id="XhP-dd-dxF"/>
+                                                        <constraint firstAttribute="trailing" secondItem="RXV-9f-oMZ" secondAttribute="trailing" constant="15" id="rTk-18-9mH"/>
                                                         <constraint firstItem="tpt-M9-s0U" firstAttribute="leading" secondItem="of5-gK-f1Q" secondAttribute="trailing" constant="10" id="sgL-hw-r4p"/>
+                                                        <constraint firstItem="RXV-9f-oMZ" firstAttribute="top" secondItem="AIJ-cQ-N68" secondAttribute="top" id="wav-h7-XAC"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

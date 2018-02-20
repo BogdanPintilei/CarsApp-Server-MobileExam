@@ -21,28 +21,28 @@ class ObjectDetailsEditTableTableViewController: UITableViewController {
     @IBOutlet var cancelButton: UIBarButtonItem!
 
     var object = Object()
-    
-    var changeToSave: Bool?
+    var totalKm = Int(0)
+    var shouldChangeEditButtonToSave: Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         fillInTextFields()
         customizeUI()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        changeToSave = true
+        shouldChangeEditButtonToSave = true
         changeSaveToEdit()
     }
 
     @IBAction func edit(_ sender: Any) {
-        if changeToSave! {
+        if shouldChangeEditButtonToSave! {
             changeEditToSave()
-            changeToSave = false
+            shouldChangeEditButtonToSave = false
         } else {
             saveEditedObject()
-            changeToSave = true
+            shouldChangeEditButtonToSave = true
             changeSaveToEdit()
         }
     }
@@ -50,7 +50,50 @@ class ObjectDetailsEditTableTableViewController: UITableViewController {
     @IBAction func cancel(_ sender: Any) {
         fillInTextFields()
         changeSaveToEdit()
-        changeToSave = true
+        shouldChangeEditButtonToSave = true
+    }
+
+    @IBAction func editKm(_ sender: Any) {
+        let alert = UIAlertController(title: "KM", message: "How many km would you like to add?", preferredStyle: .alert)
+
+        alert.addTextField { (textField) in
+            textField.placeholder = "km"
+            textField.keyboardType = .numberPad
+        }
+        totalKm = object.km!
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0]
+            if !(textField?.text?.isEmpty)! {
+                if Int((textField?.text)!)! > 0 {
+                    self.totalKm = self.totalKm + Int((textField?.text!)!)!
+                }
+                self.saveEditedKm()
+            }
+        }))
+
+        self.present(alert, animated: true, completion: nil)
+    }
+
+    private func saveEditedKm() {
+        let editedObject = Object(
+            id: object.id!,
+            name: nameTextField.text,
+            model: object.model,
+            status: statusTextField.text,
+            year: Int(yearTextField.text!),
+            km: totalKm
+        )
+        object.km = totalKm
+        LoadingView.startLoadingAnimation()
+        APIClient.editObjectAttribute(object: editedObject) { succes in
+            LoadingView.stopLoadingAnimation()
+            if succes {
+                self.kmTextField.text = String(self.totalKm)
+                print("POST /modify 200")
+            } else {
+                print("POST /modify 404")
+            }
+        }
     }
 
     private func saveEditedObject() {
@@ -96,6 +139,7 @@ class ObjectDetailsEditTableTableViewController: UITableViewController {
         Helper.applyBorderWidthAndColourToTextFields(textFields: textFields as! [UITextField])
         Helper.applyCornerRadiusTextFieldsAndAddPadding(textFields: textFields as! [UITextField])
         Helper.enableTextFields(textFields: textFields as! [UITextField])
+        kmTextField.isUserInteractionEnabled = false
     }
 
     private func disableTextFields() {
@@ -103,7 +147,6 @@ class ObjectDetailsEditTableTableViewController: UITableViewController {
             nameTextField,
             statusTextField,
             yearTextField,
-            kmTextField
         ]
 
         Helper.removeBorderWidthAndColourToTextFields(textFields: textFields as! [UITextField])
@@ -114,6 +157,7 @@ class ObjectDetailsEditTableTableViewController: UITableViewController {
     private func customizeUI() {
         disableCancelButton()
         customizeTextFields()
+        addBorderToKmField()
     }
 
     private func customizeTextFields() {
@@ -125,10 +169,10 @@ class ObjectDetailsEditTableTableViewController: UITableViewController {
             yearTextField,
             kmTextField
         ]
-        
+
         Helper.applyCornerRadiusTextFieldsAndAddPadding(textFields: textFields as! [UITextField])
     }
-    
+
     private func enableCancelButton() {
         cancelButton.isEnabled = true
         cancelButton.tintColor = UIColor.white
@@ -150,5 +194,14 @@ class ObjectDetailsEditTableTableViewController: UITableViewController {
         disableTextFields()
         editButton.title = "Edit"
     }
+
+    private func addBorderToKmField() {
+        let textFields = [
+            kmTextField
+        ]
+        Helper.applyBorderWidthAndColourToTextFields(textFields: textFields as! [UITextField])
+        Helper.applyCornerRadiusTextFieldsAndAddPadding(textFields: textFields as! [UITextField])
+    }
+
 }
 
