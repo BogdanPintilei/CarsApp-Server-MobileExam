@@ -153,7 +153,6 @@ class ObjectDetailsEditTableTableViewController: UITableViewController {
         Helper.disableTextFields(textFields: textFields as! [UITextField])
     }
 
-
     private func customizeUI() {
         disableCancelButton()
         customizeTextFields()

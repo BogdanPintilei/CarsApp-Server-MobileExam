@@ -23,6 +23,8 @@
 		5A8B962A203C3E60006BDA11 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B9629203C3E5F006BDA11 /* LoadingView.swift */; };
 		5A8B962C203C408A006BDA11 /* ObjectDetailsEditTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B962B203C408A006BDA11 /* ObjectDetailsEditTableTableViewController.swift */; };
 		5A8B962E203C5046006BDA11 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B962D203C5046006BDA11 /* HelperMethods.swift */; };
+		5A8B9634203CA1A3006BDA11 /* ManagerObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B9633203CA1A3006BDA11 /* ManagerObjectViewController.swift */; };
+		5A8B9636203CAFBB006BDA11 /* ManagerObjectDetailsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B9635203CAFBB006BDA11 /* ManagerObjectDetailsTableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		5A8B9629203C3E5F006BDA11 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		5A8B962B203C408A006BDA11 /* ObjectDetailsEditTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetailsEditTableTableViewController.swift; sourceTree = "<group>"; };
 		5A8B962D203C5046006BDA11 /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
+		5A8B9633203CA1A3006BDA11 /* ManagerObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerObjectViewController.swift; sourceTree = "<group>"; };
+		5A8B9635203CAFBB006BDA11 /* ManagerObjectDetailsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerObjectDetailsTableTableViewController.swift; sourceTree = "<group>"; };
 		8E3B87346CF10A9D4DF158DB /* Pods_CarsApp_MobileExam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarsApp_MobileExam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,6 +104,8 @@
 				5A8B961B203C2027006BDA11 /* CustomTableViewCell */,
 				5A8B9627203C3376006BDA11 /* CustomObjectTableViewController.swift */,
 				5A8B962B203C408A006BDA11 /* ObjectDetailsEditTableTableViewController.swift */,
+				5A8B9633203CA1A3006BDA11 /* ManagerObjectViewController.swift */,
+				5A8B9635203CAFBB006BDA11 /* ManagerObjectDetailsTableTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -323,7 +329,9 @@
 			files = (
 				5A8B9624203C2D02006BDA11 /* ApiClientObject.swift in Sources */,
 				5A8B9622203C2B8D006BDA11 /* APIClient.swift in Sources */,
+				5A8B9634203CA1A3006BDA11 /* ManagerObjectViewController.swift in Sources */,
 				5A8B962E203C5046006BDA11 /* HelperMethods.swift in Sources */,
+				5A8B9636203CAFBB006BDA11 /* ManagerObjectDetailsTableTableViewController.swift in Sources */,
 				5A8B961A203C2022006BDA11 /* CustomTableViewCell.swift in Sources */,
 				5A8B962C203C408A006BDA11 /* ObjectDetailsEditTableTableViewController.swift in Sources */,
 				5A8B962A203C3E60006BDA11 /* LoadingView.swift in Sources */,

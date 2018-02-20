@@ -23,9 +23,9 @@ class Factory {
 
     class func objectFromJson(json: [String: AnyObject]) -> Object {
         var objectID: Int?
-        var objectName: String?
-        var objectModel: String?
-        var objectStatus: String?
+        var objectName = String()
+        var objectModel = String()
+        var objectStatus = String()
         var objectYear: Int?
         var objectKm: Int?
 
