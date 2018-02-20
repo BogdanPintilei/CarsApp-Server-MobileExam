@@ -5,6 +5,7 @@
 def usePods
     pod 'Alamofire'
     pod 'NVActivityIndicatorView'
+    pod 'ReachabilitySwift'
 end
 
 target 'CarsApp-MobileExam' do

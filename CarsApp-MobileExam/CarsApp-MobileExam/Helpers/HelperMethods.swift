@@ -50,6 +50,4 @@ class Helper {
         return sortObjects
     }
     
-    
-    
 }

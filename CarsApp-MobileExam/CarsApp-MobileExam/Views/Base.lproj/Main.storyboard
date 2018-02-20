@@ -668,7 +668,6 @@
         <!--Manager-->
         <scene sceneID="cEO-aj-N4f">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SF7-Y2-1to" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uI6-NI-DNB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Manager" id="xlT-CR-p7N" customClass="CustomTabBarItem" customModule="CarsApp_MobileExam" customModuleProvider="target">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-12"/>
@@ -691,6 +690,7 @@
                         <segue destination="8N4-9d-Oes" kind="relationship" relationship="rootViewController" id="mlu-vJ-CS3"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SF7-Y2-1to" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-56" y="520.83958020989508"/>
         </scene>

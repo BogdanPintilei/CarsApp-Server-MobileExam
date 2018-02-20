@@ -15,9 +15,14 @@ extension APIClient {
         get(path: path) { json in
             if (json as? [[String: AnyObject]]) != nil {
                 let cars = Factory.objectsFromJsonArray(jsonArray: json as! [[String: AnyObject]])
+                Object.insertItems(objectList: cars)
                 completion(cars)
             } else {
-                completion([Object]())
+                var cars = [Object]()
+                if Object.retrieveItems().count != 0 && ConnectivityManager.shared().isConnectedToInternet() == false {
+                    cars = Object.retrieveItems()
+                }
+                completion(cars)
             }
 
         }

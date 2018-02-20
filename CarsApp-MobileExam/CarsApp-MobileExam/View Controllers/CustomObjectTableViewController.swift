@@ -11,6 +11,8 @@ import UIKit
 class CustomObjectTableViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+    static var retryInternetConnection: UIBarButtonItem!
+    
     var cars = [Object]()
     var selectedObject = Object()
 
@@ -27,11 +29,11 @@ class CustomObjectTableViewController: UIViewController {
         APIClient.getObjects { (cars) -> Void in
             LoadingView.stopLoadingAnimation()
             self.cars = cars
-            print(cars.count)
             self.tableView.reloadData()
         }
     }
 
+    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
