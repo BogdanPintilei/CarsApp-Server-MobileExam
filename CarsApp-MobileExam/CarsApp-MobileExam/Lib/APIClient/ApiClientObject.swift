@@ -23,5 +23,39 @@ extension APIClient {
         }
     }
     
+    class func editObject(object: Object, completion: @escaping (_ success: Bool) -> Void) {
+        let path = "modify"
+        let params = objectParams(object)
+        post(path: path, params: params) { json in
+            if json != nil {
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
+    }
 
+    class func objectParams(_ object: Object) -> [String: Any] {
+        var params = [String: Any]()
+        
+        if let id = object.id {
+            params["id"] = id
+        }
+        
+        if let name = object.name {
+            params["name"] = name
+        }
+        
+        if let status = object.status {
+            params["status"] = status
+        }
+        
+        if let year = object.year  {
+            params["year"] = year
+        }
+        
+        print(params)
+        return params
+    }
+    
 }

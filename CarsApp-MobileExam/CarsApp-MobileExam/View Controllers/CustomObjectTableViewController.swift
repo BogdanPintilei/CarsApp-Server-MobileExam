@@ -16,9 +16,12 @@ class CustomObjectTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getObjects()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        getObjects()
+    }
+    
     private func getObjects() {
         LoadingView.startLoadingAnimation()
         APIClient.getObjects { (cars) -> Void in

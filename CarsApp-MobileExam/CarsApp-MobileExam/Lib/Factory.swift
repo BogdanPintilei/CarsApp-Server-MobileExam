@@ -47,6 +47,8 @@ class Factory {
 
         if let jsonYear = json["year"] as? Int {
             objectYear = jsonYear
+        } else if let jsonYear = json["year"] as? String {
+            objectYear = Int(jsonYear)
         }
 
         if let jsonKm = json["km"] as? Int {

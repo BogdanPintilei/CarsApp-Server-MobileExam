@@ -40,9 +40,6 @@ class APIClient {
             completion(response.result.value)
         }
     }
-    
-
-    
 
     // MARK: - Helpers
 
@@ -55,7 +52,7 @@ class APIClient {
     }
     
     private static func stagingUrl() -> String {
-        return "http://192.168.100.18:4024/"
+        return "http://192.168.1.167:4024/"
     }
     
 }

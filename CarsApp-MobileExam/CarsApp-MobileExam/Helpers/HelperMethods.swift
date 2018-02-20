@@ -25,4 +25,23 @@ class Helper {
         }
     }
     
+    static func removeBorderWidthAndColourToTextFields(textFields: [UITextField]) {
+        for textField in textFields {
+            textField.layer.borderWidth = 0
+            textField.layer.borderColor = UIColor.clear.cgColor
+        }
+    }
+    
+    static func enableTextFields(textFields: [UITextField]) {
+        for textField in textFields {
+            textField.isUserInteractionEnabled = true
+        }
+    }
+    
+    static func disableTextFields(textFields: [UITextField]) {
+        for textField in textFields {
+            textField.isUserInteractionEnabled = false
+        }
+    }
+    
 }
