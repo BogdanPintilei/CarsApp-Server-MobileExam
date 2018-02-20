@@ -19,6 +19,10 @@ class APIClient {
         performRequest(path: path, method: .post, params: params, completion: completion)
     }
 
+    static func delete(path: String, params: [String: Any]? = nil, completion: @escaping (_ json: Any?) -> ()) {
+        performRequest(path: path, method: .delete, params: params, completion: completion)
+    }
+    
     static func patch(path: String, params: [String: Any]? = nil, completion: @escaping (_ json: Any?) -> ()) {
         performRequest(path: path, method: .patch, params: params, completion: completion)
     }

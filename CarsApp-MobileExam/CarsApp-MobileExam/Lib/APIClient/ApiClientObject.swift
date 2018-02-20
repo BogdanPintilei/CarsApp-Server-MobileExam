@@ -47,6 +47,33 @@ extension APIClient {
         }
     }
 
+    class func addObject(object: Object, completion: @escaping (_ success: Bool) -> Void) {
+        let path = "add"
+        let params = objectParamsForAdd(object)
+        post(path: path, params: params) { json in
+            if json != nil {
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
+    }
+
+    class func deleteObject(id: Int, completion: @escaping (_ success: Bool) -> Void) {
+        let path = "car/\(id)"
+        var params = [String: Any]()
+        params["id"] = id
+        delete(path: path, params: params) { succes in
+            if (succes != nil) {
+                print("delete succeded")
+                completion(true)
+            } else {
+                print("delete failed")
+                completion(false)
+            }
+        }
+    }
+
     class func objectParams(_ object: Object) -> [String: Any] {
         var params = [String: Any]()
 
@@ -79,6 +106,25 @@ extension APIClient {
 
         if let km = object.km {
             params["km"] = km
+        }
+
+        print(params)
+        return params
+    }
+
+    class func objectParamsForAdd(_ object: Object) -> [String: Any] {
+        var params = [String: Any]()
+
+        if let name = object.name {
+            params["name"] = name
+        }
+
+        if let model = object.model {
+            params["model"] = model
+        }
+
+        if let year = object.year {
+            params["year"] = year
         }
 
         print(params)

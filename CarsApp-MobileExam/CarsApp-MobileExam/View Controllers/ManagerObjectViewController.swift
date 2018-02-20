@@ -12,12 +12,12 @@ class ManagerObjectViewController: UIViewController {
 
     var cars = [Object]()
     var selectedObject = Object()
+    var deletedCarId: Int?
 
     @IBOutlet var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -26,7 +26,12 @@ class ManagerObjectViewController: UIViewController {
     }
 
     @IBAction func addObject(_ sender: Any) {
+        performSegue(withIdentifier: "ShowAddObjectStoryBoardID", sender: nil)
+    }
 
+    @IBAction func deleteObject(_ sender: Any) {
+        deleteObject()
+        tableView.reloadData()
     }
 
     private func getObjects() {
@@ -39,9 +44,46 @@ class ManagerObjectViewController: UIViewController {
             self.cars = Helper.sortObjects(objects: cars)
         }
     }
-
-    // MARK: - Navigation
     
+    private func deleteObject() {
+        showDeleteDialogue()
+    }
+
+    private func deleteObjectAPICall() {
+        LoadingView.startLoadingAnimation()
+        APIClient.deleteObject(id: deletedCarId!) { (succes) -> Void in
+            LoadingView.stopLoadingAnimation()
+            if succes {
+                print("deletion succesfull")
+                self.getObjects()
+            } else {
+                self.showAlert("Something went wrong please try again!")
+            }
+        }
+
+    }
+
+    private func showDeleteDialogue() {
+        let alert = UIAlertController(title: "Delete Car", message: "Which Car do you want to delete?", preferredStyle: .alert)
+
+        alert.addTextField { (textField) in
+            textField.placeholder = "ID"
+            textField.keyboardType = .numberPad
+        }
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0]
+            if !(textField?.text?.isEmpty)! {
+                self.deletedCarId = Int((textField?.text)!)
+                self.deleteObjectAPICall()
+            }
+        }))
+
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: - Navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowNavigationObjectDetailsModalSegueID" {
             let navVC = segue.destination as! UINavigationController
@@ -49,11 +91,11 @@ class ManagerObjectViewController: UIViewController {
             vc.object = selectedObject
         }
     }
-    
+
 }
 
 extension ManagerObjectViewController: UITableViewDelegate, UITableViewDataSource {
-    
+
     // MARK: Table View Delegate & Data Source
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

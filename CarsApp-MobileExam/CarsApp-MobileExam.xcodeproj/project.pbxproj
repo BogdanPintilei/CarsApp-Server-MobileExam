@@ -25,6 +25,8 @@
 		5A8B962E203C5046006BDA11 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B962D203C5046006BDA11 /* HelperMethods.swift */; };
 		5A8B9634203CA1A3006BDA11 /* ManagerObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B9633203CA1A3006BDA11 /* ManagerObjectViewController.swift */; };
 		5A8B9636203CAFBB006BDA11 /* ManagerObjectDetailsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B9635203CAFBB006BDA11 /* ManagerObjectDetailsTableTableViewController.swift */; };
+		5A8B9638203CB847006BDA11 /* AddObjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B9637203CB847006BDA11 /* AddObjectTableViewController.swift */; };
+		5A8B963A203CBDA8006BDA11 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B9639203CBDA8006BDA11 /* ViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		5A8B962D203C5046006BDA11 /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		5A8B9633203CA1A3006BDA11 /* ManagerObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerObjectViewController.swift; sourceTree = "<group>"; };
 		5A8B9635203CAFBB006BDA11 /* ManagerObjectDetailsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerObjectDetailsTableTableViewController.swift; sourceTree = "<group>"; };
+		5A8B9637203CB847006BDA11 /* AddObjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObjectTableViewController.swift; sourceTree = "<group>"; };
+		5A8B9639203CBDA8006BDA11 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		8E3B87346CF10A9D4DF158DB /* Pods_CarsApp_MobileExam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarsApp_MobileExam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,6 +110,7 @@
 				5A8B962B203C408A006BDA11 /* ObjectDetailsEditTableTableViewController.swift */,
 				5A8B9633203CA1A3006BDA11 /* ManagerObjectViewController.swift */,
 				5A8B9635203CAFBB006BDA11 /* ManagerObjectDetailsTableTableViewController.swift */,
+				5A8B9637203CB847006BDA11 /* AddObjectTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				5A8B9616203C1CEB006BDA11 /* UIColorExtension.swift */,
+				5A8B9639203CBDA8006BDA11 /* ViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 				5A8B9622203C2B8D006BDA11 /* APIClient.swift in Sources */,
 				5A8B9634203CA1A3006BDA11 /* ManagerObjectViewController.swift in Sources */,
 				5A8B962E203C5046006BDA11 /* HelperMethods.swift in Sources */,
+				5A8B963A203CBDA8006BDA11 /* ViewControllerExtension.swift in Sources */,
 				5A8B9636203CAFBB006BDA11 /* ManagerObjectDetailsTableTableViewController.swift in Sources */,
 				5A8B961A203C2022006BDA11 /* CustomTableViewCell.swift in Sources */,
 				5A8B962C203C408A006BDA11 /* ObjectDetailsEditTableTableViewController.swift in Sources */,
@@ -339,6 +346,7 @@
 				5A8B9626203C2D93006BDA11 /* Factory.swift in Sources */,
 				5A5B230E203BFDF800CDDE76 /* AppDelegate.swift in Sources */,
 				5A8B961E203C22E5006BDA11 /* Object.swift in Sources */,
+				5A8B9638203CB847006BDA11 /* AddObjectTableViewController.swift in Sources */,
 				5A8B9628203C3376006BDA11 /* CustomObjectTableViewController.swift in Sources */,
 				5A8B9617203C1CEB006BDA11 /* UIColorExtension.swift in Sources */,
 			);
