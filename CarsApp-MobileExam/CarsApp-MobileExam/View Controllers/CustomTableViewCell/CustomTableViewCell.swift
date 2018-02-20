@@ -12,16 +12,16 @@ class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet var objectNameLabel: UILabel!
     @IBOutlet var objectIDLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    var object: Object! { didSet { configureCell() } }
 
-        // Configure the view for the selected state
+    private func configureCell() {
+        objectNameLabel.text = object.name
+        objectIDLabel.text = String(describing: object.id!)
     }
 
 }

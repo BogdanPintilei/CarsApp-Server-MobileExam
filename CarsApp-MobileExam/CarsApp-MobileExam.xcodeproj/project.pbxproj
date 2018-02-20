@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07FC25424FFB983F2ADEDDE9 /* Pods_CarsApp_MobileExam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E3B87346CF10A9D4DF158DB /* Pods_CarsApp_MobileExam.framework */; };
 		5A5B230E203BFDF800CDDE76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B230D203BFDF800CDDE76 /* AppDelegate.swift */; };
-		5A5B2310203BFDF800CDDE76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B230F203BFDF800CDDE76 /* ViewController.swift */; };
 		5A5B2313203BFDF800CDDE76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A5B2311203BFDF800CDDE76 /* Main.storyboard */; };
 		5A5B2315203BFDF800CDDE76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A5B2314203BFDF800CDDE76 /* Assets.xcassets */; };
 		5A5B2318203BFDF800CDDE76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A5B2316203BFDF800CDDE76 /* LaunchScreen.storyboard */; };
@@ -16,12 +16,20 @@
 		5A8B9617203C1CEB006BDA11 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B9616203C1CEB006BDA11 /* UIColorExtension.swift */; };
 		5A8B961A203C2022006BDA11 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B9619203C2022006BDA11 /* CustomTableViewCell.swift */; };
 		5A8B961E203C22E5006BDA11 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B961D203C22E5006BDA11 /* Object.swift */; };
+		5A8B9622203C2B8D006BDA11 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B9621203C2B8D006BDA11 /* APIClient.swift */; };
+		5A8B9624203C2D02006BDA11 /* ApiClientObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B9623203C2D02006BDA11 /* ApiClientObject.swift */; };
+		5A8B9626203C2D93006BDA11 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B9625203C2D93006BDA11 /* Factory.swift */; };
+		5A8B9628203C3376006BDA11 /* CustomObjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B9627203C3376006BDA11 /* CustomObjectTableViewController.swift */; };
+		5A8B962A203C3E60006BDA11 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B9629203C3E5F006BDA11 /* LoadingView.swift */; };
+		5A8B962C203C408A006BDA11 /* ObjectDetailsEditTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B962B203C408A006BDA11 /* ObjectDetailsEditTableTableViewController.swift */; };
+		5A8B962E203C5046006BDA11 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B962D203C5046006BDA11 /* HelperMethods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07F382100331301436E0CCFF /* Pods-CarsApp-MobileExam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsApp-MobileExam.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarsApp-MobileExam/Pods-CarsApp-MobileExam.release.xcconfig"; sourceTree = "<group>"; };
+		3A56C8A2E20D1F6429F9BA0E /* Pods-CarsApp-MobileExam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsApp-MobileExam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarsApp-MobileExam/Pods-CarsApp-MobileExam.debug.xcconfig"; sourceTree = "<group>"; };
 		5A5B230A203BFDF800CDDE76 /* CarsApp-MobileExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CarsApp-MobileExam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A5B230D203BFDF800CDDE76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A5B230F203BFDF800CDDE76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5A5B2312203BFDF800CDDE76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A5B2314203BFDF800CDDE76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A5B2317203BFDF800CDDE76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +38,14 @@
 		5A8B9616203C1CEB006BDA11 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		5A8B9619203C2022006BDA11 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		5A8B961D203C22E5006BDA11 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		5A8B9621203C2B8D006BDA11 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		5A8B9623203C2D02006BDA11 /* ApiClientObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientObject.swift; sourceTree = "<group>"; };
+		5A8B9625203C2D93006BDA11 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		5A8B9627203C3376006BDA11 /* CustomObjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomObjectTableViewController.swift; sourceTree = "<group>"; };
+		5A8B9629203C3E5F006BDA11 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		5A8B962B203C408A006BDA11 /* ObjectDetailsEditTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetailsEditTableTableViewController.swift; sourceTree = "<group>"; };
+		5A8B962D203C5046006BDA11 /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
+		8E3B87346CF10A9D4DF158DB /* Pods_CarsApp_MobileExam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarsApp_MobileExam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FC25424FFB983F2ADEDDE9 /* Pods_CarsApp_MobileExam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +65,8 @@
 			children = (
 				5A5B230C203BFDF800CDDE76 /* CarsApp-MobileExam */,
 				5A5B230B203BFDF800CDDE76 /* Products */,
+				8F8596988856883A4F460FAA /* Pods */,
+				AB7EE1977AD98D76F8A9A14C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +87,7 @@
 				5A8B9610203C1839006BDA11 /* View Controllers */,
 				5A8B9618203C1CF0006BDA11 /* Extensions */,
 				5A8B9615203C1CC9006BDA11 /* Helpers */,
+				5A8B961F203C2B5E006BDA11 /* Lib */,
 				5A5B2314203BFDF800CDDE76 /* Assets.xcassets */,
 				5A5B2319203BFDF800CDDE76 /* Info.plist */,
 			);
@@ -78,7 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				5A8B961B203C2027006BDA11 /* CustomTableViewCell */,
-				5A5B230F203BFDF800CDDE76 /* ViewController.swift */,
+				5A8B9627203C3376006BDA11 /* CustomObjectTableViewController.swift */,
+				5A8B962B203C408A006BDA11 /* ObjectDetailsEditTableTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -103,7 +124,9 @@
 		5A8B9615203C1CC9006BDA11 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5A8B9629203C3E5F006BDA11 /* LoadingView.swift */,
 				5A8B9613203C1CB3006BDA11 /* CustomTabBarItem.swift */,
+				5A8B962D203C5046006BDA11 /* HelperMethods.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -132,6 +155,41 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5A8B961F203C2B5E006BDA11 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				5A8B9620203C2B76006BDA11 /* APIClient */,
+				5A8B9625203C2D93006BDA11 /* Factory.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		5A8B9620203C2B76006BDA11 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				5A8B9621203C2B8D006BDA11 /* APIClient.swift */,
+				5A8B9623203C2D02006BDA11 /* ApiClientObject.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		8F8596988856883A4F460FAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A56C8A2E20D1F6429F9BA0E /* Pods-CarsApp-MobileExam.debug.xcconfig */,
+				07F382100331301436E0CCFF /* Pods-CarsApp-MobileExam.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AB7EE1977AD98D76F8A9A14C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E3B87346CF10A9D4DF158DB /* Pods_CarsApp_MobileExam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A5B231C203BFDF800CDDE76 /* Build configuration list for PBXNativeTarget "CarsApp-MobileExam" */;
 			buildPhases = (
+				C5188777B0FD92465193312C /* [CP] Check Pods Manifest.lock */,
 				5A5B2306203BFDF800CDDE76 /* Sources */,
 				5A5B2307203BFDF800CDDE76 /* Frameworks */,
 				5A5B2308203BFDF800CDDE76 /* Resources */,
+				71960DDFB07F04F3B5A86FF5 /* [CP] Embed Pods Frameworks */,
+				7C41DF3498366DA6D900C85C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,16 +260,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		71960DDFB07F04F3B5A86FF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CarsApp-MobileExam/Pods-CarsApp-MobileExam-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarsApp-MobileExam/Pods-CarsApp-MobileExam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C41DF3498366DA6D900C85C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarsApp-MobileExam/Pods-CarsApp-MobileExam-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5188777B0FD92465193312C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarsApp-MobileExam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5A5B2306203BFDF800CDDE76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A5B2310203BFDF800CDDE76 /* ViewController.swift in Sources */,
+				5A8B9624203C2D02006BDA11 /* ApiClientObject.swift in Sources */,
+				5A8B9622203C2B8D006BDA11 /* APIClient.swift in Sources */,
+				5A8B962E203C5046006BDA11 /* HelperMethods.swift in Sources */,
 				5A8B961A203C2022006BDA11 /* CustomTableViewCell.swift in Sources */,
+				5A8B962C203C408A006BDA11 /* ObjectDetailsEditTableTableViewController.swift in Sources */,
+				5A8B962A203C3E60006BDA11 /* LoadingView.swift in Sources */,
 				5A8B9614203C1CB3006BDA11 /* CustomTabBarItem.swift in Sources */,
+				5A8B9626203C2D93006BDA11 /* Factory.swift in Sources */,
 				5A5B230E203BFDF800CDDE76 /* AppDelegate.swift in Sources */,
 				5A8B961E203C22E5006BDA11 /* Object.swift in Sources */,
+				5A8B9628203C3376006BDA11 /* CustomObjectTableViewController.swift in Sources */,
 				5A8B9617203C1CEB006BDA11 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +467,7 @@
 		};
 		5A5B231D203BFDF800CDDE76 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A56C8A2E20D1F6429F9BA0E /* Pods-CarsApp-MobileExam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -353,12 +477,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Bogdan.CarsApp-MobileExam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		5A5B231E203BFDF800CDDE76 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07F382100331301436E0CCFF /* Pods-CarsApp-MobileExam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -368,7 +493,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Bogdan.CarsApp-MobileExam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -22,15 +22,15 @@ class Object: NSObject {
         name: String? = "",
         model: String? = "",
         status: String? = "",
-        km: Int? = 0,
-        year: Int = 0
+        year: Int? = 0,
+        km: Int? = 0
     ) {
         self.id = id
         self.name = name
         self.model = model
         self.status = status
-        self.km = km
         self.year = year
+        self.km = km
     }
     
 }
